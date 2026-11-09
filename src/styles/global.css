@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-@import "tailwindcss";
-
 @import "./variables.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   margin: 0;
@@ -13,12 +15,18 @@
 html {
   scroll-behaviour: smooth;
   scroll-behavior: smooth;
+
+    width: 100%;
+  min-width: 0;
 }
 
 body {
   font-family: var(--font-primary);
   background: var(--color-white);
   color: var(--color-text);
+    width: 100%;
+  min-width: 0;
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -97,6 +105,29 @@ img {
   font-weight: 600;
   transition: 0.3s ease;
   border: 1px solid transparent;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+button,
+a {
+  overflow-wrap: break-word;
+}
+
+#root {
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .btn-primary {

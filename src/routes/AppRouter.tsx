@@ -4,55 +4,110 @@ import MainLayout from '../layouts/MainLayout'
 import Home from '../modules/home/Home'
 import ComingSoon from './ComingSoon'
 import NotFound from './NotFound'
+import { CommunityPage } from "../modules/communaute";
+import { ContactPage } from "../modules/contact";
+
+import {
+  ResourcesPage,
+  ArticleDetailPage,
+} from "../modules/ressources";
+
+import {
+  ProjectsPage,
+  ProjectDetailPage,
+} from "../modules/realisations";
+
+
+import {
+  InnovationPage,
+  InnovationDetailPage,
+} from "../modules/innovation";
+
+import {
+  ExpertisesPage,
+  ExpertiseDetailPage,
+} from "../modules/expertises";
+
+import {
+  ServicesPage,
+  ServiceDetailPage,
+} from "../modules/services";
+
+import {
+  AboutPage,
+  MissionVisionPage,
+  ValuesPage,
+  ApproachPage,
+} from '../modules/entreprise'
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
     children: [
-        {
+      {
         index: true,
         element: <Home />,
-        },
+      },
       {
         path: 'entreprise',
-        element: <ComingSoon />,
+        element: <AboutPage />,
+      },
+      {
+        path: 'entreprise/a-propos',
+        element: <AboutPage />,
       },
       {
         path: 'entreprise/mission-vision',
-        element: <ComingSoon />,
+        element: <MissionVisionPage />,
+      },
+      {
+        path: 'entreprise/valeurs',
+        element: <ValuesPage />,
+      },
+      {
+        path: 'entreprise/notre-approche',
+        element: <ApproachPage />,
       },
       {
         path: 'services',
-        element: <ComingSoon />,
+        element: <ServicesPage />,
       },
       {
-        path: 'services/:service',
-        element: <ComingSoon />,
+        path: 'services/:slug',
+        element: <ServiceDetailPage />,
       },
       {
         path: 'expertises',
-        element: <ComingSoon />,
+        element: <ExpertisesPage />,
+      },
+      {
+        path: 'expertises/:slug',
+        element: <ExpertiseDetailPage />,
       },
       {
         path: 'innovation',
-        element: <ComingSoon />,
+        element: <InnovationPage />,
+      },
+      {
+        path: 'innovation/:slug',
+        element: <InnovationDetailPage />,
       },
       {
         path: 'realisations',
-        element: <ComingSoon />,
+        element: <ProjectsPage />,
       },
       {
-        path: 'communaute',
-        element: <ComingSoon />,
+        path: 'realisations/:slug',
+        element: <ProjectDetailPage />,
       },
       {
         path: 'ressources',
-        element: <ComingSoon />,
+        element: <ResourcesPage />,
       },
       {
         path: 'contact',
-        element: <ComingSoon />,
+        element: <ContactPage />,
       },
       {
         path: 'faq',
@@ -71,8 +126,17 @@ export const router = createBrowserRouter([
         element: <ComingSoon />,
       },
       {
+        path: 'communaute',
+        element: <CommunityPage />,
+      },
+      {
         path: '*',
         element: <NotFound />,
+      },
+
+      {
+        path: 'ressources/:slug',
+        element: <ArticleDetailPage />,
       },
     ],
   },

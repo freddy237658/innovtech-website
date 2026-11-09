@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 export default function NotFound() {
+  const { t } = useTranslation()
+
   return (
     <section className="section container">
-      <h1 className="section-title">Page introuvable</h1>
+      <h1 className="section-title">{t('Page introuvable')}</h1>
       <p className="section-description">
-        L’adresse demandée ne correspond à aucune page du site.
+        {t('L’adresse demandée ne correspond à aucune page du site.')}
       </p>
       <Link to="/" className="btn btn-primary">
-        Retour à l’accueil
+        {t('Retour à l’accueil')}
       </Link>
     </section>
   )

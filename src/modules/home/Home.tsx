@@ -10,8 +10,6 @@ import CommunitySection from './components/CommunitySection'
 import BlogSection from './components/BlogSection'
 import CTASection from './components/CTASection'
 
-import './home.css'
-
 export default function Home() {
   return (
     <>

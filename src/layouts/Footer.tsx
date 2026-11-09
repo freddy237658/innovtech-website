@@ -4,11 +4,15 @@ import {
   MapPin,
   Phone,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 import logo from '../assets/logo/logo-innovtech.png'
+import { useTranslation } from 'react-i18next'
 import './footer.css'
 
 export default function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer className="site-footer">
 
@@ -22,9 +26,7 @@ export default function Footer() {
           />
 
           <p>
-            Nous transformons vos idées en solutions
-            numériques innovantes pour construire
-            votre avenir digital.
+            {t('Nous transformons vos idées en solutions numériques innovantes pour construire votre avenir digital.')}
           </p>
 
           <div className="footer-socials">
@@ -50,51 +52,51 @@ export default function Footer() {
         </div>
 
         <div className="footer-column">
-          <h3>Entreprise</h3>
-          <a href="/entreprise">À propos</a>
-          <a href="/entreprise/mission-vision">Mission & vision</a>
-          <a href="/realisations">Nos réalisations</a>
-          <a href="/communaute">Communauté</a>
+          <h3>{t('Entreprise')}</h3>
+          <a href="/entreprise">{t('À propos')}</a>
+          <a href="/entreprise/mission-vision">{t('Mission & vision')}</a>
+          <a href="/realisations">{t('Nos réalisations')}</a>
+          <a href="/communaute">{t('Communauté')}</a>
         </div>
 
         <div className="footer-column">
-          <h3>Nos services</h3>
-          <a href="/services/developpement-logiciel">Développement logiciel</a>
-          <a href="/services/solutions-saas">Solutions SaaS</a>
-          <a href="/services/developpement-web">Développement web</a>
-          <a href="/services/digitalisation">Digitalisation</a>
-          <a href="/services/design-ui-ux">UI/UX Design</a>
+          <h3>{t('Nos services')}</h3>
+          <a href="/services/developpement-logiciel">{t('Développement logiciel')}</a>
+          <a href="/services/solutions-saas">{t('Solutions SaaS')}</a>
+          <a href="/services/developpement-web">{t('Développement web')}</a>
+          <a href="/services/digitalisation">{t('Digitalisation')}</a>
+          <a href="/services/design-ui-ux">{t('UI/UX Design')}</a>
         </div>
 
         <div className="footer-column">
-          <h3>Explorer</h3>
-          <a href="/expertises">Expertises</a>
-          <a href="/innovation">Innovation & R&D</a>
-          <a href="/ressources">Blog & ressources</a>
+          <h3>{t('Explorer')}</h3>
+          <a href="/expertises">{t('Expertises')}</a>
+          <a href="/innovation">{t('Innovation & R&D')}</a>
+          <Link to="/ressources">{t('Blog & ressources')}</Link>
           <a href="/faq">FAQ</a>
           <a href="/contact">Contact</a>
         </div>
 
         <div className="footer-column footer-contact">
-          <h3>Contact</h3>
+          <h3>{t('Contact')}</h3>
 
           <p>
             <MapPin size={16} />
-            Cameroun
+            {t('Cameroun')}
           </p>
 
           <p>
             <Mail size={16} />
-            Contactez-nous
+            {t('Contactez-nous')}
           </p>
 
           <p>
             <Phone size={16} />
-            Discutons de votre projet
+            {t('Discutons de votre projet')}
           </p>
 
           <a href="/contact" className="footer-contact-link">
-            Nous contacter
+            {t('Nous contacter')}
             <ArrowUpRight size={16} />
           </a>
 
@@ -108,17 +110,17 @@ export default function Footer() {
 
           <p>
             © {new Date().getFullYear()} INNOVTECH.
-            Tous droits réservés.
+            {t('Tous droits réservés.')}
           </p>
 
           <div>
-            <a href="/confidentialite">Confidentialité</a>
-            <a href="/conditions-generales">Conditions générales</a>
-            <a href="/mentions-legales">Mentions légales</a>
+            <a href="/confidentialite">{t('Confidentialité')}</a>
+            <a href="/conditions-generales">{t('Conditions générales')}</a>
+            <a href="/mentions-legales">{t('Mentions légales')}</a>
           </div>
 
           <span>
-            Votre vision, nos technologies, votre réussite.
+            {t('Votre vision, nos technologies, votre réussite.')}
           </span>
 
         </div>
