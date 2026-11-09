@@ -6,8 +6,8 @@
 
 .footer-main {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.2fr 1fr 1.3fr;
-  gap: 40px;
+  grid-template-columns: 1.5fr 1fr 1.2fr 1fr 1.1fr 1.3fr;
+  gap: 30px;
   padding-bottom: 65px;
 }
 

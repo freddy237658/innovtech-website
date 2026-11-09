@@ -2,7 +2,6 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import MainLayout from '../layouts/MainLayout'
 import Home from '../modules/home/Home'
-import ComingSoon from './ComingSoon'
 import NotFound from './NotFound'
 import { CommunityPage } from "../modules/communaute";
 import { ContactPage } from "../modules/contact";
@@ -11,6 +10,15 @@ import {
   ResourcesPage,
   ArticleDetailPage,
 } from "../modules/ressources";
+
+import {
+  FAQPage,
+  PrivacyPolicyPage,
+  CookiePolicyPage,
+  TermsPage,
+  LegalNoticePage,
+  ServerErrorPage,
+} from "../modules/legal";
 
 import {
   ProjectsPage,
@@ -111,19 +119,23 @@ export const router = createBrowserRouter([
       },
       {
         path: 'faq',
-        element: <ComingSoon />,
+        element: <FAQPage />,
       },
       {
         path: 'confidentialite',
-        element: <ComingSoon />,
+        element: <PrivacyPolicyPage />,
+      },
+      {
+        path: 'cookies',
+        element: <CookiePolicyPage />,
       },
       {
         path: 'conditions-generales',
-        element: <ComingSoon />,
+        element: <TermsPage />,
       },
       {
         path: 'mentions-legales',
-        element: <ComingSoon />,
+        element: <LegalNoticePage />,
       },
       {
         path: 'communaute',
@@ -137,6 +149,10 @@ export const router = createBrowserRouter([
       {
         path: 'ressources/:slug',
         element: <ArticleDetailPage />,
+      },
+      {
+        path: 'erreur-serveur',
+        element: <ServerErrorPage />,
       },
     ],
   },

@@ -148,12 +148,17 @@
     top: var(--header-height);
     left: 0;
     width: 100%;
+    max-height: calc(100vh - var(--header-height));
+    max-height: calc(100dvh - var(--header-height));
     background: white;
     padding: 20px;
     display: none;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
     box-shadow: var(--shadow-md);
   }
 

@@ -73,8 +73,16 @@ export default function Footer() {
           <a href="/expertises">{t('Expertises')}</a>
           <a href="/innovation">{t('Innovation & R&D')}</a>
           <Link to="/ressources">{t('Blog & ressources')}</Link>
-          <a href="/faq">FAQ</a>
           <a href="/contact">Contact</a>
+        </div>
+
+        <div className="footer-column">
+          <h3>{t('Informations')}</h3>
+          <Link to="/faq">{t('FAQ')}</Link>
+          <Link to="/confidentialite">{t('Confidentialité')}</Link>
+          <Link to="/cookies">{t('Cookies')}</Link>
+          <Link to="/conditions-generales">{t('Conditions générales')}</Link>
+          <Link to="/mentions-legales">{t('Mentions légales')}</Link>
         </div>
 
         <div className="footer-column footer-contact">
@@ -112,12 +120,6 @@ export default function Footer() {
             © {new Date().getFullYear()} INNOVTECH.
             {t('Tous droits réservés.')}
           </p>
-
-          <div>
-            <a href="/confidentialite">{t('Confidentialité')}</a>
-            <a href="/conditions-generales">{t('Conditions générales')}</a>
-            <a href="/mentions-legales">{t('Mentions légales')}</a>
-          </div>
 
           <span>
             {t('Votre vision, nos technologies, votre réussite.')}
